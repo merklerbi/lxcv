@@ -1,0 +1,31 @@
+\documentclass[fancy, german]{lxcv}
+
+\name{Max}{Mustermann}
+\adress{Musterstraße 1}{12345 Musterstadt}
+\email{max@muster.mann}
+\website{www.muster.mann}
+\phone{00}{1234 56 78 910}
+\born[Musterstadt]{1990-8-29}
+\city{Musterstadt}
+
+\pathtopicture[size=40mm]{static/img/profile.png}
+\pathtosignature[xshift=3mm, yshift=-5mm]{static/img/signature.png}
+
+\begin{document}
+
+\input{letter/a_template/application}
+\signature[name=true, date=true, hspace=0cm, vspace=10mm]
+\listofattachments
+
+\maketitle
+\input{static/cv.tex}
+\signature[hspace=0cm, vspace=5mm]
+
+\attachment[header=true]{\en{Motivational letter}\de{Motivationsschreiben}}
+\input{letter/a_template/motivation}
+% \signature[hspace=4.5cm, vspace=5mm]
+
+\attachment{\de{Nachweise}\en{Certificates}}
+\includepdf[pages=-]{static/attachments/certificate}
+
+\end{document}
