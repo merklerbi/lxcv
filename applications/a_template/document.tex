@@ -1,0 +1,13 @@
+
+\input{\letterpath letter}
+\signature[name=true, date=true, hspace=0cm, vspace=10mm]
+\listofattachments
+
+\maketitle
+\input{static/cv.tex}
+
+\attachment[header=true]{\en{Motivational letter}\de{Motivationsschreiben}}
+\input{\letterpath motivation}
+
+\attachment{\de{Nachweise}\en{Certificates}}
+\includepdf[pages=-]{static/attachments/certificate}
